@@ -78,14 +78,14 @@ class Album extends Component {
         return <td className="song-number">{index + 1}</td>
       }
       if (this.state.isPlaying && this.state.currentSong === song){
-        return <span className="ion-pause"></span>
+        return <td className="ion-pause"></td>
       }
       if (!this.state.isPlaying && this.state.currentSong === song) {
-        return <span className="ion-play"></span>
+        return <td className="ion-play"></td>
       }
 
       else {
-        return <span className="ion-play"></span>
+        return <td className="ion-play"></td>
       }
     }
 
