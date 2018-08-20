@@ -97,8 +97,8 @@ class Album extends Component {
     }
 
     formatTime(time) {
+      const seconds = parseInt((time % 60), 10);
       const minutes = Math.floor(time / 60);
-		  const seconds = parseInt((time % 60), 10);
 
       if (time === undefined) {
         return "-:--";
@@ -138,7 +138,6 @@ class Album extends Component {
       if (!this.state.isPlaying && this.state.currentSong === song) {
         return <td className="ion-play"></td>
       }
-
       else {
         return <td className="ion-play"></td>
       }
