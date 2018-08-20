@@ -99,15 +99,16 @@ class Album extends Component {
     formatTime(time) {
       const minutes = Math.floor(time / 60);
 		  const seconds = parseInt((time % 60), 10);
-		    if (seconds < 10 ) {
-			       return minutes + ":0" + seconds;
-		}
-		    else if (time === undefined) {
-			       return "-:--";
-		}
-        else {
-			       return minutes + ":" + seconds;
-		}
+
+      if (seconds <= 0) {
+         return "-:--";
+      }
+      else if (seconds < 10 && seconds >= 1) {
+           return minutes + ":0" + seconds;
+      }
+      else {
+           return minutes + ":" + seconds;
+      }
 	}
 
     handleVolumeChange(e) {
