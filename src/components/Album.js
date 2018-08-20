@@ -100,10 +100,13 @@ class Album extends Component {
       const minutes = Math.floor(time / 60);
 		  const seconds = parseInt((time % 60), 10);
 
-      if (seconds <= 0) {
-         return "-:--";
+      if (time === undefined) {
+        return "-:--";
       }
-      else if (seconds < 10 && seconds >= 1) {
+      else if (seconds === 0 && minutes < 1) {
+        return "-:--"
+      }
+      else if (seconds >= 0 && seconds < 10) {
            return minutes + ":0" + seconds;
       }
       else {
