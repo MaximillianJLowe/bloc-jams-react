@@ -1,17 +1,32 @@
-.album.title {
-  text-align: left;
+.bloc-banner {
+  font-size: 50px;
 }
-
-
-
-
-
-
-
-/* this.state.albums.map( (album, index) =>
-  <Link to={`/album/${album.slug}`} key={index}>
-    <img src={album.albumCover} alt={album.title} />
-    <div>{album.title}</div>
-    <div>{album.artist}</div>
-    <div>{album.songs.length} songs</div>
-  </Link> */
+.library {
+  text-align: center;
+  align-content: center;
+  color: black;
+}
+.library-full {
+  text-align: center;
+  align-content: center;
+  color: black;
+}
+.album.title {
+  text-align: center;
+  align-content: center;
+  color: black;
+}
+.covers {
+  text-align: center;
+  align-content: center;
+  color: black;
+}
+.title .artist .song{
+  text-align: center;
+  align-content: center;
+  color: black;
+}
+.link-text{
+  color: black;
+  font-size:20px;
+}

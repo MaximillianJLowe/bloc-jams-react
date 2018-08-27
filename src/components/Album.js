@@ -42,7 +42,6 @@ class Album extends Component {
 
   componentWillUnmount() {
     this.audioElement.src = null;
-    this.audioElement = null;
     this.audioElement.removeEventListener('timeupdate', this.eventListeners.timeupdate);
     this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
   }
@@ -155,7 +154,7 @@ class Album extends Component {
           </div>
         </section>
         <table id="song-list">
-          <colgroup>
+          <colgroup id="song-list-cols">
             <col id="song-number-column" />
             <col id="song-title-column" />
             <col id="song-duration-column" />

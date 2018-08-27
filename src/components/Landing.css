@@ -3,13 +3,16 @@
   background-size: cover;
   color: white;
   margin-bottom: 1em;
+  margin-top: 1em;
   max-height: 500px;
 }
 .hero-title {
   margin-bottom: 8em;
   font-size: 4rem;
 }
-
+h1 {
+  text-align: center;
+}
 h3 {
   font-size: 30px;
 }
