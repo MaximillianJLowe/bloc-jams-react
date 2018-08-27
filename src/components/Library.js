@@ -10,7 +10,6 @@ class Library extends Component {
   }
   render() {
     return (
-
       <div className="library-full">
         <h1 className="bloc-banner">Bloc Jams Library</h1>
         <section className="library">
@@ -22,9 +21,8 @@ class Library extends Component {
               <div className="artist">{album.artist}</div>
               <div className="song">{album.songs.length} songs</div>
             </Link>
-
-          )
-        }
+            )
+          }
         </section>
       </div>
     );

@@ -6,7 +6,6 @@ import Library from './components/Library';
 import Album from './components/Album';
 import Navbar from './components/CustomNavbar';
 
-
 class App extends Component {
   render() {
     return (
@@ -18,7 +17,6 @@ class App extends Component {
             <Route path="/album/:slug" component={Album} />
         </div>
       </Router>
-
     );
   }
 }

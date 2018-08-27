@@ -21,8 +21,6 @@ export default class CustomNavbar extends Component {
             </NavItem>
           </Nav>
       </Navbar>
-
-
-    )
+    );
   }
 }
