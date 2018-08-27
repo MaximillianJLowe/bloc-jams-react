@@ -1,29 +1,35 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
-
+import Navbar from './components/CustomNavbar';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-          <header>
-            <nav>
-              <Link to='/'>Landing</Link>
-              <Link to='/library'>Library</Link>
-            </nav>
-              <h1 className="banner"> Bloc Jams </h1>
-          </header>
-        <main>
-          <Route exact path="/" component={Landing} />
-          <Route path="/library" component={Library} />
-          <Route path="/album/:slug" component={Album} />
-        </main>
-      </div>
+
+
+      <Router>
+        <div>
+          <Navbar />
+            <Route exact path="/" component={Landing} />
+            <Route path="/library" component={Library} />
+            <Route path="/album/:slug" component={Album} />
+        </div>
+      </Router>
+      
+
+
+
+
+
+
+
+
+
+
     );
   }
 }

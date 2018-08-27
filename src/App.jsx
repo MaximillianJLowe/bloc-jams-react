@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
+import { Nav, NavItem, Navbar, Jumbotron, Button } from 'react-bootstrap';
 import './App.css';
 import Landing from './components/Landing';
 import Library from './components/Library';
@@ -10,18 +11,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <header>
-            <nav>
-              <Link to='/'>Landing</Link>
-              <Link to='/library'>Library</Link>
-            </nav>
-              <h1> Bloc Jams </h1>
-          </header>
-        <main>
-          <Route exact path="/" component={Landing} />
-          <Route path="/library" component={Library} />
-          <Route path="/album/:slug" component={Album} />
-        </main>
+      <Router>
+        <div>
+        <Route exact path="/" component={Landing} />
+        <Route path="/library" component={Library} />
+        <Route path="/album/:slug" component={Album} />
+        </div>
+      </Router>
+      
+          <header className="Header"/>
+
+
+
+
+
+  <h1 className="banner"> Bloc Jams </h1>
+
       </div>
     );
   }
