@@ -1,0 +1,10 @@
+.album {
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 25px;
+}
+.song-duration {
+  text-align: right !important;
+}
